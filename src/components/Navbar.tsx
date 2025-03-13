@@ -5,6 +5,8 @@ import { ShoppingCart, User, Menu, X } from 'lucide-react';
 import { useCart } from '@/context/CartContext';
 import { useAuth } from '@/context/AuthContext';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import CartDrawer from '@/components/CartDrawer';
 
 const Navbar = () => {
   const location = useLocation();
@@ -101,13 +103,24 @@ const Navbar = () => {
               </Link>
             )}
             
-            <Link to="/cart" className="relative">
-              <ShoppingCart size={22} className="text-gray-700 hover:text-green-600 transition-colors" />
-              {totalItems > 0 && (
-                <span className="absolute -top-2 -right-2 bg-green-600 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
-                  {totalItems}
-                </span>
-              )}
+            <Sheet>
+              <SheetTrigger asChild>
+                <button className="relative">
+                  <ShoppingCart size={22} className="text-gray-700 hover:text-green-600 transition-colors" />
+                  {totalItems > 0 && (
+                    <span className="absolute -top-2 -right-2 bg-green-600 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                      {totalItems}
+                    </span>
+                  )}
+                </button>
+              </SheetTrigger>
+              <SheetContent className="w-full sm:max-w-md">
+                <CartDrawer />
+              </SheetContent>
+            </Sheet>
+            
+            <Link to="/cart" className="text-sm font-medium text-gray-600 hover:text-green-600 transition-colors">
+              Ver carrito
             </Link>
           </motion.div>
           
@@ -117,14 +130,21 @@ const Navbar = () => {
             animate={{ opacity: 1 }}
             className="flex md:hidden items-center space-x-4"
           >
-            <Link to="/cart" className="relative">
-              <ShoppingCart size={22} className="text-gray-700" />
-              {totalItems > 0 && (
-                <span className="absolute -top-2 -right-2 bg-green-600 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
-                  {totalItems}
-                </span>
-              )}
-            </Link>
+            <Sheet>
+              <SheetTrigger asChild>
+                <button className="relative">
+                  <ShoppingCart size={22} className="text-gray-700" />
+                  {totalItems > 0 && (
+                    <span className="absolute -top-2 -right-2 bg-green-600 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                      {totalItems}
+                    </span>
+                  )}
+                </button>
+              </SheetTrigger>
+              <SheetContent className="w-full">
+                <CartDrawer />
+              </SheetContent>
+            </Sheet>
             
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
