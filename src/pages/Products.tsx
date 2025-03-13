@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import ProductCard from '@/components/ProductCard';
@@ -28,7 +27,7 @@ const Products = () => {
         name: 'Organic Broccoli',
         description: 'Fresh organic broccoli from local farms. Rich in vitamins and minerals, our broccoli is harvested at peak ripeness for maximum flavor and nutrition.',
         price: 2.99,
-        image: 'https://images.unsplash.com/photo-1615380217237-2d57a3e4d467?q=80&w=2940&auto=format&fit=crop',
+        image: 'https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?q=80&w=2831&auto=format&fit=crop',
         category: 'vegetables'
       },
       {

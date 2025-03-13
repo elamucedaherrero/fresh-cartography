@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -28,7 +27,7 @@ const ProductDetail = () => {
           name: 'Organic Broccoli',
           description: 'Fresh organic broccoli from local farms. Rich in vitamins and minerals, our broccoli is harvested at peak ripeness for maximum flavor and nutrition. \n\nNutrition Information: High in vitamin C, vitamin K, and fiber. Low in calories and carbohydrates. \n\nStorage Tips: Store in the refrigerator crisper drawer for up to 5 days. For best results, store unwashed with a damp paper towel.',
           price: 2.99,
-          image: 'https://images.unsplash.com/photo-1615380217237-2d57a3e4d467?q=80&w=2940&auto=format&fit=crop',
+          image: 'https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?q=80&w=2831&auto=format&fit=crop',
           category: 'vegetables'
         },
         {

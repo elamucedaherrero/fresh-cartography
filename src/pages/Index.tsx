@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import Hero from '@/components/Hero';
@@ -15,7 +14,7 @@ const Index = () => {
       name: 'Organic Broccoli',
       description: 'Fresh organic broccoli from local farms',
       price: 2.99,
-      image: 'https://images.unsplash.com/photo-1615380217237-2d57a3e4d467?q=80&w=2940&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?q=80&w=2831&auto=format&fit=crop',
       category: 'Vegetables'
     },
     {
